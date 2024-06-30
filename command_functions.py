@@ -14,15 +14,37 @@ set_metric4_text="Received! You can add 2 other or /stop_set_metrics"
 set_metric5_text="Received! You can add 1 other or /stop_set_metrics"
 set_metric6_text="Received!"
 stop_text="Stopped receving metrics"
+shap_text="""**Understanding SHAP Graphs**
+SHapley Additive exPlanations charts help explain how each factor (e.g., amount of sleep, physical activity, social interactions) affects your stress level or mood. This is important so that you can better understand which aspects of your lifestyle or environment most affect your well-being.
+
+**How do I read SHAP charts?**
+
+1. Graph Of The Influence Of Features (SHAP Summary Plot):
+- Color Labels: Each color represents the value of a feature (for example, red is a high value, blue is a low value).
+    - Y axis: Various factors that affect your stress level/mood (e.g. amount of sleep, physical activity).
+    - X-axis: The influence of each factor on the prediction of the model. A positive value indicates an increase in stress/mood levels, a negative value indicates a decrease.
+
+2. SHAP Force Plot:
+- X-Axis: Each individual prediction.
+    - Color Bar: Various factors influencing the prediction are shown, where the width of the bar indicates the strength of the influence. The red stripes indicate factors that increase stress/mood levels, and the blue stripes indicate factors that lower it.
+
+**Why is this necessary?**
+
+These graphs will help you:
+- Identify key factors: Understand which specific aspects of your life most strongly affect your well-being.
+- Take action: For example, if you see that lack of sleep greatly increases your stress level, you can focus on improving the quality and duration of sleep.
+- Improve your quality of life: Using these insights, you can make lifestyle changes to improve your mood and reduce stress levels.
+
+**Remember that SHAP charts provide personalized recommendations based on your data, helping you make informed decisions to improve your health and well-being.**"
+"""
 
 class CommandFuncs:        
     def start(update, context):
         with open('pictures/preview1.png', 'rb') as image:
             context.bot.send_photo(chat_id=update.effective_chat.id, photo=image, caption=preview_text)
             
-    def info(update, context):
-        with open('pictures/preview2.png', 'rb') as image:
-            context.bot.send_photo(chat_id=update.effective_chat.id, photo=image, caption="Let's /register")
+    def shap(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text=shap_text, parse_mode='Markdown')
             
     def register(update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, text=register_text, parse_mode='Markdown')

@@ -16,8 +16,8 @@ def main():
     graph_image_handler = CommandHandler('graph_image', CommandFuncs.graph_image)
     dispatcher.add_handler(graph_image_handler)
     
-    info_handler = CommandHandler('info', CommandFuncs.info)
-    dispatcher.add_handler(info_handler)
+    shap_handler = CommandHandler('shap', CommandFuncs.shap)
+    dispatcher.add_handler(shap_handler)
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('register', CommandFuncs.register)],
