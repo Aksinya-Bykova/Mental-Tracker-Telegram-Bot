@@ -34,8 +34,25 @@ def main():
         fallbacks=[CommandHandler('stop_set_metrics', CommandFuncs.stop_set_metrics)],
         allow_reentry=True
     )
+    
+    conv_edit_handler = ConversationHandler(
+        entry_points=[CommandHandler('edit', CommandFuncs.edit)],
+        states={
+            'SETTING_OPTIMIZE_METRIC': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_optimization_metric)],
+            'SETTING METRIC 1': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric1)],
+            'SETTING METRIC 2': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric2)],
+            'SETTING METRIC 3': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric3)],
+            'SETTING METRIC 4': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric4)],
+            'SETTING METRIC 5': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric5)],
+            'END METRICS': [MessageHandler(Filters.text & ~Filters.command, CommandFuncs.set_metric6)],
+            'DONE': [CommandHandler('stop_edit_metrics', CommandFuncs.stop_edit_metrics)]
+        },
+        fallbacks=[CommandHandler('stop_edit_metrics', CommandFuncs.stop_edit_metrics)],
+        allow_reentry=True
+    )
 
-    dispatcher.add_handler(conv_handler)
+
+    dispatcher.add_handler(conv_edit_handler)
 
     updater.start_polling()
 

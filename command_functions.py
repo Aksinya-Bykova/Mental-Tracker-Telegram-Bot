@@ -108,3 +108,53 @@ class CommandFuncs:
             send_image_to_user('shap_summary_plot.png')
         else:
             context.bot.send_message(chat_id=update.effective_chat.id, text="Cell A1 is empty. Please provide a valid metric name.")
+            
+    def edit(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Please enter all your metrics", parse_mode='Markdown')
+        return 'SETTING_OPTIMIZE_METRIC'
+    
+    def set_optimization_metric(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text=optimize_metric_text)
+        user_input = update.message.text.strip()
+        user_settings["TABLE_URL"] = user_input
+        return 'SETTING METRIC 1'
+        
+    def set_metric1(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Print metric1")
+        gt=GoogleTable(settings["CREDITS_NAME"], user_settings["TABLE_URL"])
+        gt._update_cell(user_settings["CALLS"], 1, update.message.text)
+        return 'SETTING METRIC 2'
+    
+    def set_metric2(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Print metric2")
+        gt=GoogleTable(settings["CREDITS_NAME"], user_settings["TABLE_URL"])
+        gt._update_cell(user_settings["CALLS"], 2, update.message.text)
+        return 'SETTING METRIC 3'
+    
+    def set_metric3(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Print metric3")
+        gt=GoogleTable(settings["CREDITS_NAME"], user_settings["TABLE_URL"])
+        gt._update_cell(user_settings["CALLS"], 3, update.message.text)
+        return 'SETTING METRIC 4'
+    
+    def set_metric4(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Print metric4")
+        gt=GoogleTable(settings["CREDITS_NAME"], user_settings["TABLE_URL"])
+        gt._update_cell(user_settings["CALLS"], 4, update.message.text)
+        return 'SETTING METRIC 5'
+    
+    def set_metric5(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Print metric5")
+        gt=GoogleTable(settings["CREDITS_NAME"], user_settings["TABLE_URL"])
+        gt._update_cell(user_settings["CALLS"], 5, update.message.text)
+        return 'END METRICS'
+    
+    def set_metric6(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text="Collected!")
+        user_settings["TABLE_URL"]+=1
+        return ConversationHandler.END
+    
+    def stop_edit_metrics(update, context):
+        context.bot.send_message(chat_id=update.effective_chat.id, text=stop_text)
+        user_settings["TABLE_URL"]+=1
+        return ConversationHandler.END

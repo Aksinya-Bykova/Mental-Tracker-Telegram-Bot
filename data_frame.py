@@ -45,3 +45,4 @@ def send_image_to_user(image_path):
     chat_id = user_settings["CHAT_ID"]
     with open(image_path, 'rb') as image_file:
         bot.send_photo(chat_id=chat_id, photo=image_file)
+
