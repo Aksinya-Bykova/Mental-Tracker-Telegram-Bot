@@ -19,4 +19,6 @@ user_settings = {
     'CHAT_ID' : ''
 }
 ```
+3. Now works on a local machine. You can watch video demonstration, contact me or build by your own. Maybe I will try to run it on a free server
+   
 Feel free to contact me [@Aksinya_By](https://t.me/Aksinya_By)
