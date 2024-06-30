@@ -10,6 +10,7 @@ Telegram-Bot is available as [@mental_tracker_bot](http://t.me/mental_tracker_bo
 settings = {
     'TOKEN' : '',
     'CREDITS_NAME' : 'creds.json',
+    'CALLS' : 1
 }
 ```
 
