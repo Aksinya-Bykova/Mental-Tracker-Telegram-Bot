@@ -9,15 +9,15 @@ Telegram-Bot is available as [@mental_tracker_bot](http://t.me/mental_tracker_bo
 ```
 settings = {
     'TOKEN' : '',
-    'CREDITS_NAME' : 'creds.json',
-    'CALLS' : 1
+    'CREDITS_NAME' : 'creds.json'
 }
 ```
 
 ```
 user_settings = {
     'TABLE_URL' : '',
-    'CHAT_ID' : ''
+    'CHAT_ID' : '',
+    'CALLS' : 1
 }
 ```
 3. Now works on a local machine. You can watch video demonstration, contact me or build by your own. Maybe I will try to run it on a free server
