@@ -5,7 +5,7 @@ from config import settings
 from user_config import user_settings
 
 preview_text="Firstable you need to /register"
-register_text="Please create a google sheet and give us a link. Copy [this table template](https://docs.google.com/spreadsheets/d/14ZrJ2bnlziSelyY8X-dMbkKAMlxGfmcG-6qdyKLh5gg/edit?usp=sharing) and make yours"
+register_text="Please create a google sheet and give us a link. Copy [this table template](https://docs.google.com/spreadsheets/d/14ZrJ2bnlziSelyY8X-dMbkKAMlxGfmcG-6qdyKLh5gg/edit?usp=sharing) and make yours.\nHere is a short instruction https://youtu.be/7IttzHzxNmc"
 optimize_metric_text="Great! Send us a metric which you want to optimize from 0 to 10. For example your mood or stress level"
 set_metric1_text="Now set the first metric which you want to track. \nAttention! It must be valuable, like meters, hours, etc., but don't print a unit \nExamples: 2.39, 30, -1.0, 65536"
 set_metric2_text="We received your metric, you can add 4 other or /stop_set_metrics"
