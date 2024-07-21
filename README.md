@@ -1,5 +1,7 @@
 # Mental-Tracker-Bot
 
+[Google Slides about](https://docs.google.com/presentation/d/1b7DhCISRSmB6D8AlWGvF0qDPpCttXjrKir6g-1Omfq8/edit?usp=sharing)
+
 This is my toy project as a part of [Mental Wellness Hackathon 2024](https://hackformental.com/)
 
 Telegram-Bot is available as [@mental_tracker_bot](http://t.me/mental_tracker_bot)
