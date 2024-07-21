@@ -1,5 +1,7 @@
 # Mental-Tracker-Bot
 
+![](https://github.com/Aksinya-Bykova/Mental-Tracker-Telegram-Bot/blob/main/pictures/preview1.png)
+
 [Google Slides about](https://docs.google.com/presentation/d/1b7DhCISRSmB6D8AlWGvF0qDPpCttXjrKir6g-1Omfq8/edit?usp=sharing)
 
 This is my toy project as a part of [Mental Wellness Hackathon 2024](https://hackformental.com/)
