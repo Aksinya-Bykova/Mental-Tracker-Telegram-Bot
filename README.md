@@ -4,7 +4,8 @@
 
 ## Watch [Google Slides about](https://docs.google.com/presentation/d/1b7DhCISRSmB6D8AlWGvF0qDPpCttXjrKir6g-1Omfq8/edit?usp=sharing)
 
-## Watch [![YouTube demo](https://img.youtube.com/vi/7IttzHzxNmc/0.jpg)](https://www.youtube.com/watch?v=7IttzHzxNmc)
+## Watch [YouTube Demo](https://www.youtube.com/watch?v=7IttzHzxNmc)
+[![](https://img.youtube.com/vi/7IttzHzxNmc/0.jpg)](https://www.youtube.com/watch?v=7IttzHzxNmc)
 
 This is my toy project as a part of [Mental Wellness Hackathon 2024](https://hackformental.com/)
 
